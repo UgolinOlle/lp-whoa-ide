@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
-const BEAM_POSITIONS = [0.1, 0.3, 0.5, 0.7, 0.85, 0.95];
+import { BEAM_POSITIONS } from "@/lib/constants";
 
 export const ReactiveBeams = () => {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });

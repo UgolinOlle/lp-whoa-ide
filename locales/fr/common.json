@@ -10,7 +10,97 @@
   },
   "feature": {
     "title": "Déployez la puissance de Neovim en un seul setup",
-    "subtitle": "Whoa IDE transforme Neovim en un véritable environnement de développement intégré, sans compromis"
+    "subtitle": "Whoa IDE transforme Neovim en un véritable environnement de développement intégré, sans compromis",
+    "sections": [
+      {
+        "title": "Intelligence de code",
+        "hours": "40 HEURES GAGNÉES",
+        "description": "Support instantané pour plus de 40 langages avec LSP intégré et auto-configuré.",
+        "points": [
+          "💡 Autocomplétion contextuelle (nvim-cmp)",
+          "🚨 Diagnostics avancés (erreurs, warnings, hints)",
+          "🛠️ Code actions et refactorisation en un clic"
+        ]
+      },
+      {
+        "title": "Outils de qualité de code",
+        "hours": "20 HEURES GAGNÉES",
+        "description": "Formatage et linting automatiques avec conform.nvim, Tree-sitter et plus.",
+        "points": [
+          "🧼 Formatters & linters automatiques",
+          "🔧 Intégration Prettier, ESLint, PHP CS Fixer",
+          "🌈 Coloration syntaxique précise avec Tree-sitter"
+        ]
+      },
+      {
+        "title": "Navigation & arborescence",
+        "hours": "25 HEURES GAGNÉES",
+        "description": "Accès rapide à tout votre projet avec neo-tree, Telescope, tabby et barbar.",
+        "points": [
+          "📁 Explorateur de fichiers avec support Git (neo-tree)",
+          "🔍 Recherche instantanée avec Telescope",
+          "🗺️ Minimap & buffers élégants"
+        ]
+      },
+      {
+        "title": "UI & Expérience développeur",
+        "hours": "30 HEURES GAGNÉES",
+        "description": "Interface moderne, lisible et fluide grâce à noice.nvim et lualine.",
+        "points": [
+          "🎨 Thèmes modernes : Sonokai, Catppuccin, Whoa",
+          "💫 Animations fluides et feedback visuel",
+          "📊 Barre de statut avancée avec lualine"
+        ]
+      },
+      {
+        "title": "Performance & Productivité",
+        "hours": "35 HEURES GAGNÉES",
+        "description": "Un environnement rapide et modulable pour un développement efficace.",
+        "points": [
+          "⚡ Démarrage ultra rapide grâce à lazy.nvim (lazy-loading intelligent)",
+          "🧩 Configuration modulaire pour désactiver ce que tu n’utilises pas",
+          "🧠 Session management automatique",
+          "🖥️ Terminal intégré avec gestion multi-shells"
+        ]
+      },
+      {
+        "title": "Git & collaboration",
+        "hours": "20 HEURES GAGNÉES",
+        "description": "Un Git puissant, visuel et intégré directement dans ton IDE.",
+        "points": [
+          "🧭 Git signs dans le gutter",
+          "🧵 Fugitive intégré pour les workflows Git en mode terminal",
+          "🖼️ Diffview pour visualiser et gérer tes modifications",
+          "🕵️ Blame rapide, historique, stash, rebase depuis l’interface"
+        ]
+      },
+      {
+        "title": "Intégrations Dev avancées",
+        "hours": "40 HEURES GAGNÉES",
+        "description": "Un support complet pour les frameworks et outils modernes.",
+        "points": [
+          "🐞 Debugging avec DAP (nvim-dap) pour TypeScript, Go, PHP, etc.",
+          "🧪 Tests en un clic avec feedback visuel",
+          "🌐 Support complet Symfony / Laravel / React / Tailwind",
+          "♻️ Live reload, snippets, macros et workflows optimisés"
+        ]
+      },
+      {
+        "title": "DevTools & extras",
+        "hours": "15 HEURES GAGNÉES",
+        "description": "Des outils bonus pour améliorer ton confort et ta vitesse au quotidien.",
+        "points": [
+          "🧰 Floating terminal, dashboard, clipboard manager",
+          "🎮 Rich presence Discord",
+          "⚙️ Keymaps customisées pour la vitesse",
+          "🧭 Command Palette façon VS Code"
+        ]
+      }
+    ]
+  },
+  "built": {
+    "title": "Pensé pour les devs, pas pour les tinkerers",
+    "description": "Whoa IDE n’est pas juste une config Neovim. C’est une boîte à outils cohérente, maintenue, évolutive. Fini les setups bricolés : installez, ouvrez, codez."
   },
   "header": {
     "feature": "Fonctionnalité",

@@ -120,3 +120,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .bg-diagonal-stripes {
+    background-image: repeating-linear-gradient(
+      45deg,
+      theme("colors.border") 0px,
+      theme("colors.border") 1px,
+      transparent 1px,
+      transparent 8px
+    );
+  }
+
+  .letter-xray {
+    color: transparent;
+    -webkit-text-stroke: 1px #22c55e;
+    text-shadow: none;
+  }
+}

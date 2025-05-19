@@ -10,7 +10,97 @@
   },
   "feature": {
     "title": "Deploy the power of Neovim in a single setup",
-    "subtitle": "Whoa IDE turns Neovim into a true integrated development environment, without compromise"
+    "subtitle": "Whoa IDE turns Neovim into a true integrated development environment, without compromise",
+    "sections": [
+      {
+        "title": "Code Intelligence",
+        "hours": "40 HOURS SAVED",
+        "description": "Instant support for over 40 languages with built-in & preconfigured LSP.",
+        "points": [
+          "💡 Context-aware autocompletion (nvim-cmp)",
+          "🚨 Advanced diagnostics (errors, warnings, hints)",
+          "🛠️ One-click code actions and refactoring"
+        ]
+      },
+      {
+        "title": "Code Quality Tools",
+        "hours": "20 HOURS SAVED",
+        "description": "Automatic formatting and linting with conform.nvim, Tree-sitter, and more.",
+        "points": [
+          "🧼 Automatic formatters & linters",
+          "🔧 Prettier, ESLint, PHP CS Fixer integration",
+          "🌈 Precise syntax highlighting with Tree-sitter"
+        ]
+      },
+      {
+        "title": "Navigation & File Tree",
+        "hours": "25 HOURS SAVED",
+        "description": "Quick access to everything with neo-tree, Telescope, tabby and barbar.",
+        "points": [
+          "📁 Git-ready file explorer with neo-tree",
+          "🔍 Instant search with Telescope",
+          "🗺️ Minimap & elegant buffers"
+        ]
+      },
+      {
+        "title": "UI & Developer Experience",
+        "hours": "30 HOURS SAVED",
+        "description": "Modern, readable and smooth interface with noice.nvim & lualine.",
+        "points": [
+          "🎨 Modern themes: Sonokai, Catppuccin, Whoa",
+          "💫 Smooth animations & visual feedback",
+          "📊 Advanced statusline with lualine"
+        ]
+      },
+      {
+        "title": "Performance & Productivity",
+        "hours": "35 HOURS SAVED",
+        "description": "A fast, modular and optimized environment to get more done.",
+        "points": [
+          "⚡ Ultra-fast startup with lazy.nvim (smart lazy-loading)",
+          "🧩 Modular config to disable what you don’t need",
+          "🧠 Automatic session management",
+          "🖥️ Integrated terminal with multi-shell support"
+        ]
+      },
+      {
+        "title": "Git & Collaboration",
+        "hours": "20 HOURS SAVED",
+        "description": "Built-in Git workflows with powerful CLI and visual tools.",
+        "points": [
+          "🧭 Git signs in the gutter",
+          "🧵 Fugitive for terminal Git workflows",
+          "🖼️ Diffview to visualize and manage changes",
+          "🕵️ Quick blame, history, stash and rebase from the UI"
+        ]
+      },
+      {
+        "title": "Advanced Dev Integrations",
+        "hours": "40 HOURS SAVED",
+        "description": "Full support for modern frameworks and development flows.",
+        "points": [
+          "🐞 Debugging with DAP (nvim-dap) for TypeScript, Go, PHP, etc.",
+          "🧪 One-click tests with visual feedback",
+          "🌐 Full support for Symfony / Laravel / React / Tailwind",
+          "♻️ Live reload, snippets, macros and optimized workflows"
+        ]
+      },
+      {
+        "title": "DevTools & Extras",
+        "hours": "15 HOURS SAVED",
+        "description": "Extra tools for comfort and speed — all in your IDE.",
+        "points": [
+          "🧰 Floating terminal, dashboard, clipboard manager",
+          "🎮 Rich presence Discord",
+          "⚙️ Custom keymaps for speed",
+          "🧭 Command Palette just like VS Code"
+        ]
+      }
+    ]
+  },
+  "built": {
+    "title": "Built for Developers, by Developers",
+    "description": "Whoa IDE is designed to be the ultimate Neovim setup for developers, by developers. We’ve spent hundreds of hours perfecting this configuration so you can focus on what matters most: building amazing software."
   },
   "header": {
     "feature": "Feature",
