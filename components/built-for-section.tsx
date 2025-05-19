@@ -91,7 +91,7 @@ export const BuiltForDevsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 sm:py-32 overflow-hidden bg-muted border-y border-border"
+      className="relative my-32 py-24 sm:py-32 overflow-hidden bg-muted rounded-[2rem]"
     >
       <motion.div
         className="pointer-events-none absolute top-0 h-full w-1 bg-gradient-to-b from-transparent via-green-500/30 to-transparent z-10"
