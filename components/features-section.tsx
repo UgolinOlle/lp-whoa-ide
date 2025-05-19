@@ -17,7 +17,7 @@ export const FeaturesSection = () => {
   }[];
 
   return (
-    <section className="relative py-16 border-border border border-dashed">
+    <section className="relative my-16 py-16 border-border border border-dashed">
       <div className="absolute left-0 top-0 h-full w-10 bg-diagonal-stripes pointer-events-none z-0" />
       <div className="absolute right-0 top-0 h-full w-10 bg-diagonal-stripes pointer-events-none z-0" />
 
