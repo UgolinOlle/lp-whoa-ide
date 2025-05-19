@@ -5,8 +5,8 @@ import "./globals.css";
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { I18nProvider } from "@/components/i18n-provider";
 import { defaultMetadata } from "@/lib/metadata";
+import { Providers } from "@/components/providers/providers";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <I18nProvider>
+      <Providers>
         <Header />
         <body
           className={`${roboto.variable} ${robotoMono.variable} antialiased`}
@@ -35,7 +35,7 @@ export default function RootLayout({
           {children}
         </body>
         <Footer />
-      </I18nProvider>
+      </Providers>
     </html>
   );
 }

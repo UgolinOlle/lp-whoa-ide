@@ -7,6 +7,7 @@ import { FOOTER_LINKS } from "@/lib/data";
 
 import Neovim from "./icons/neovim";
 import { LangSwitcher } from "./ui/lang-switcher";
+import { ThemeSwitcher } from "./ui/theme-switcher";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -51,6 +52,7 @@ export const Footer = () => {
             </svg>
           </Link>
           <LangSwitcher />
+          <ThemeSwitcher />
         </div>
         <span className="text-muted-foreground block text-center text-sm">
           {" "}

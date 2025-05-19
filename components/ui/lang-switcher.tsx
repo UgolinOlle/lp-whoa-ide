@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import { LANGUAGES } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
-export function LangSwitcher() {
+export const LangSwitcher = () => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
 
@@ -48,4 +48,4 @@ export function LangSwitcher() {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};
