@@ -8,17 +8,19 @@
     "description": "Everything you need to build production-grade apps — already wired, already beautiful.",
     "cta": "Use now"
   },
+  "feature": {
+    "title": "Deploy the power of Neovim in a single setup",
+    "subtitle": "Whoa IDE turns Neovim into a true integrated development environment, without compromise"
+  },
   "header": {
     "feature": "Feature",
     "solution": "Solution",
-    "pricing": "Pricing",
-    "about": "About"
+    "about": "About",
+    "documentation": "Documentation"
   },
   "footer": {
     "features": "Features",
     "solution": "Solution",
-    "customers": "Customers",
-    "pricing": "Pricing",
     "help": "Help",
     "about": "About"
   }

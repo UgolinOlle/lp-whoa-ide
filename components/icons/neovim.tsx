@@ -25,44 +25,29 @@ const Neovim = (props: SVGProps<SVGSVGElement>) => (
         <stop stopColor="#439240" stopOpacity={0.84} offset="100%" />
       </linearGradient>
     </defs>
-    <g
-      id="Page-1"
-      stroke="none"
-      strokeWidth={1}
-      fill="none"
-      fillRule="evenodd"
-      sketchType="MSPage"
-    >
-      <g
-        id="mark-copy"
-        sketchType="MSLayerGroup"
-        transform="translate(2.000000, 3.000000)"
-      >
+    <g id="Page-1" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+      <g id="mark-copy" transform="translate(2.000000, 3.000000)">
         <path
           d="M0,155.5704 L155,-1 L154.999997,727 L0,572.237919 L0,155.5704 Z"
           id="Left---green"
           fill="url(#linearGradient-1)"
-          sketchType="MSShapeGroup"
         />
         <path
           d="M443.060403,156.982405 L600,-1 L596.818792,727 L442,572.219941 L443.060403,156.982405 Z"
           id="Right---blue"
           fill="url(#linearGradient-2)"
-          sketchType="MSShapeGroup"
           transform="translate(521.000000, 363.500000) scale(-1, 1) translate(-521.000000, -363.500000) "
         />
         <path
           d="M154.986294,0 L558,615.189696 L445.224605,728 L42,114.172017 L154.986294,0 Z"
           id="Cross---blue"
           fill="url(#linearGradient-3)"
-          sketchType="MSShapeGroup"
         />
         <path
           d="M155,283.83232 L154.786754,308 L31,124.710606 L42.4619486,113 L155,283.83232 Z"
           id="Shadow"
           fillOpacity={0.13}
           fill="#000000"
-          sketchType="MSShapeGroup"
         />
       </g>
     </g>

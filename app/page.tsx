@@ -7,7 +7,7 @@ import { Hero } from "@/components/hero";
 
 export default function LandingPage() {
   return (
-    <main className="bg-muted py-16">
+    <main className="bg-background py-16">
       <Hero />
 
       <section className="bg-background py-16 border-t">

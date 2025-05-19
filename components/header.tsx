@@ -10,6 +10,7 @@ import { HEADER_ITEMS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 import Neovim from "./icons/neovim";
+import { GithubStars } from "./ui/github-stars";
 
 export const Header = () => {
   const [menuState, setMenuState] = useState(false);
@@ -46,7 +47,7 @@ export const Header = () => {
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                <Neovim />
+                <Neovim className="w-8 h-8" />
               </Link>
 
               <button
@@ -90,23 +91,14 @@ export const Header = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className={cn(isScrolled && "lg:hidden")}
-                >
-                  <Link href="#">
-                    <span>Login</span>
-                  </Link>
-                </Button>
+                <GithubStars className={cn(isScrolled && "lg:hidden")} />
                 <Button
                   asChild
                   size="sm"
                   className={cn(isScrolled && "lg:hidden")}
                 >
                   <Link href="#">
-                    <span>Sign Up</span>
+                    <span>{t("header.documentation")}</span>
                   </Link>
                 </Button>
                 <Button
@@ -115,7 +107,7 @@ export const Header = () => {
                   className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
                 >
                   <Link href="#">
-                    <span>Get Started</span>
+                    <span>{t("header.documentation")}</span>
                   </Link>
                 </Button>
               </div>

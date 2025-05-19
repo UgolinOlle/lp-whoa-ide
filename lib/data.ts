@@ -40,7 +40,6 @@ export const AVATARS = [
 export const HEADER_ITEMS = [
   { name: "header.feature" as const, href: "#link" },
   { name: "header.solution" as const, href: "#link" },
-  { name: "header.pricing" as const, href: "#link" },
   { name: "header.about" as const, href: "#link" },
 ];
 
@@ -68,14 +67,6 @@ export const FOOTER_LINKS = [
   },
   {
     titleKey: "footer.solution" as const,
-    href: "#",
-  },
-  {
-    titleKey: "footer.customers" as const,
-    href: "#",
-  },
-  {
-    titleKey: "footer.pricing" as const,
     href: "#",
   },
   {

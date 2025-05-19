@@ -27,15 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Providers>
-        <Header />
-        <body
-          className={`${roboto.variable} ${robotoMono.variable} antialiased`}
-        >
+      <body className={`${roboto.variable} ${robotoMono.variable} antialiased`}>
+        <Providers>
+          <Header />
           {children}
-        </body>
-        <Footer />
-      </Providers>
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }
