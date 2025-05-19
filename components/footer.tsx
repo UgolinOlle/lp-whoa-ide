@@ -8,6 +8,7 @@ import { FOOTER_LINKS } from "@/lib/data";
 import Neovim from "./icons/neovim";
 import { LangSwitcher } from "./ui/lang-switcher";
 import { ThemeSwitcher } from "./ui/theme-switcher";
+import { TextLoop } from "./ui/text-loop";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -53,6 +54,23 @@ export const Footer = () => {
           </Link>
           <LangSwitcher />
           <ThemeSwitcher />
+        </div>
+        <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
+          <TextLoop>
+            <span className="text-muted-foreground block text-center text-sm">
+              Inspired by{" "}
+              <Link
+                href="https://x.com/heysatya_/status/1923340536737398794/photo/1"
+                passHref
+              >
+                Satya
+              </Link>
+              from X/Twitter
+            </span>
+            <span className="text-muted-foreground block text-center text-sm">
+              Built with ❤️.
+            </span>
+          </TextLoop>
         </div>
         <span className="text-muted-foreground block text-center text-sm">
           {" "}
