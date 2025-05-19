@@ -3,16 +3,18 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
+import { HEADER_ITEMS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 import Neovim from "./icons/neovim";
-import { HEADER_ITEMS } from "@/lib/data";
 
 export const Header = () => {
   const [menuState, setMenuState] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,7 +67,7 @@ export const Header = () => {
                       href={item.href}
                       className="text-muted-foreground hover:text-accent-foreground block duration-150"
                     >
-                      <span>{item.name}</span>
+                      <span>{t(item.name)}</span>
                     </Link>
                   </li>
                 ))}
@@ -81,7 +83,7 @@ export const Header = () => {
                         href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
                       >
-                        <span>{item.name}</span>
+                        <span>{t(item.name)}</span>
                       </Link>
                     </li>
                   ))}

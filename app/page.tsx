@@ -1,12 +1,13 @@
 "use client";
 
-import { Hero } from "@/components/hero";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { Hero } from "@/components/hero";
+
 export default function LandingPage() {
   return (
-    <div className="bg-muted">
+    <main className="bg-muted py-16">
       <Hero />
 
       <section className="bg-background py-16 border-t">
@@ -86,6 +87,6 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

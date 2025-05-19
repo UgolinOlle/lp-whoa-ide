@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowRightIcon } from "lucide-react";
 
 import { AVATARS } from "@/lib/data";
@@ -5,8 +7,11 @@ import { AVATARS } from "@/lib/data";
 import { AvatarCircles } from "./ui/avatar-circles";
 import { Button } from "./ui/button";
 import { TextHoverEnter } from "./ui/text-hover";
+import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="max-w-5xl mx-auto px-6 py-16 text-center flex flex-col items-center">
       <AvatarCircles numPeople={99} avatarUrls={AVATARS} />
@@ -29,7 +34,7 @@ export const Hero = () => {
 
       <Button className="mt-6 group">
         <TextHoverEnter className="text-primary-foreground">
-          Use Now
+          {t("hero.cta")}
         </TextHoverEnter>
         <span className="group-hover:-rotate-45 transition-transform duration-300 ease-in-out">
           <ArrowRightIcon className="w-4 h-4" />

@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "title": "Une base de code complète pour créer des applications B2B",
+    "cta": "Utilisez maintenant"
+  },
+  "header": {
+    "feature": "Fonctionnalité",
+    "solution": "Solution",
+    "pricing": "Tarifs",
+    "about": "À propos"
+  },
+  "footer": {
+    "features": "Fonctionnalités",
+    "solution": "Solution",
+    "customers": "Clients",
+    "pricing": "Tarifs",
+    "help": "Aide",
+    "about": "À propos"
+  }
+}

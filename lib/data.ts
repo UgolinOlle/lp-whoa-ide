@@ -38,8 +38,52 @@ export const AVATARS = [
  * @property {string} href - The URL or anchor link that the navigation item points to.
  */
 export const HEADER_ITEMS = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "header.feature" as const, href: "#link" },
+  { name: "header.solution" as const, href: "#link" },
+  { name: "header.pricing" as const, href: "#link" },
+  { name: "header.about" as const, href: "#link" },
+];
+
+/**
+ * @constant LANGUAGES
+ * @description An array of objects representing the supported languages for the application.
+ * @property {string} code - The language code (e.g., "en" for English).
+ * @property {string} label - The display name of the language (e.g., "English").
+ */
+export const LANGUAGES = [
+  { code: "en", label: "English" },
+  { code: "fr", label: "Français" },
+];
+
+/**
+ * @constant FOOTER_LINKS
+ * @description An array of objects representing the links in the footer section.
+ * @property {string} title - The display name of the link.
+ * @property {string} href - The URL or anchor link that the link points to.
+ */
+export const FOOTER_LINKS = [
+  {
+    titleKey: "footer.features" as const,
+    href: "#",
+  },
+  {
+    titleKey: "footer.solution" as const,
+    href: "#",
+  },
+  {
+    titleKey: "footer.customers" as const,
+    href: "#",
+  },
+  {
+    titleKey: "footer.pricing" as const,
+    href: "#",
+  },
+  {
+    titleKey: "footer.help" as const,
+    href: "#",
+  },
+  {
+    titleKey: "footer.about" as const,
+    href: "#",
+  },
 ];

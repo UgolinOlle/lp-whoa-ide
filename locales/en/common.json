@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "title": "A Full-Stack Boilerplate to Build B2B Apps",
+    "cta": "Use now"
+  },
+  "header": {
+    "feature": "Feature",
+    "solution": "Solution",
+    "pricing": "Pricing",
+    "about": "About"
+  },
+  "footer": {
+    "features": "Features",
+    "solution": "Solution",
+    "customers": "Customers",
+    "pricing": "Pricing",
+    "help": "Help",
+    "about": "About"
+  }
+}
