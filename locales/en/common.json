@@ -1,6 +1,11 @@
 {
   "hero": {
-    "title": "A Full-Stack Boilerplate to Build B2B Apps",
+    "subheading": "Loved by 500+ Developers and Founders",
+    "title": {
+      "strong": "The Ultimate Neovim",
+      "muted": "Starter Kit to Code Faster, Smarter, and Cleaner"
+    },
+    "description": "Everything you need to build production-grade apps — already wired, already beautiful.",
     "cta": "Use now"
   },
   "header": {

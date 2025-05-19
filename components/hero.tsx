@@ -17,19 +17,18 @@ export const Hero = () => {
       <AvatarCircles numPeople={99} avatarUrls={AVATARS} />
 
       <p className="text-sm text-muted-foreground mb-4 mt-2">
-        Loved by 500+ Developers and Founders
+        {t("hero.subheading")}
       </p>
 
       <h1 className="text-6xl font-bold leading-tight w-full max-w-4xl">
-        <span className="text-foreground">The Ultimate Neovim </span>{" "}
+        <span className="text-foreground">{t("hero.title.strong")}</span>{" "}
         <span className="text-muted-foreground/50">
-          Starter Kit to Code Faster, Smarter, and Cleaner
+          {t("hero.title.muted")}
         </span>
       </h1>
 
       <p className="mt-4 text-muted-foreground max-w-lg w-full mx-auto">
-        Everything you need to build production-grade apps — already wired,
-        already beautiful.
+        {t("hero.description")}
       </p>
 
       <Button className="mt-6 group">

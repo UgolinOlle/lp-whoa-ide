@@ -1,6 +1,11 @@
 {
   "hero": {
-    "title": "Une base de code complète pour créer des applications B2B",
+    "subheading": "Apprécié par plus de 500 développeurs et fondateurs",
+    "title": {
+      "strong": "Le kit Neovim ultime",
+      "muted": "Pour coder plus vite, plus intelligemment, plus proprement"
+    },
+    "description": "Tout ce dont vous avez besoin pour créer une app de production — déjà câblée, déjà magnifique.",
     "cta": "Utilisez maintenant"
   },
   "header": {
