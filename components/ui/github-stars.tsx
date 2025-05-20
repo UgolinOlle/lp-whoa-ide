@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Star } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { AnimatedNumber } from "./animated-number";
 
 type GithubStarsProps = {
   className?: string;
@@ -59,7 +60,10 @@ export const GithubStars = ({ className }: GithubStarsProps) => {
       {loading ? (
         <span className="text-muted-foreground animate-pulse">…</span>
       ) : stars !== null ? (
-        <span>Stars on Github {stars.toLocaleString()}</span>
+        <span className="flex items-center gap-1">
+          Stars on Github
+          <AnimatedNumber value={stars} />
+        </span>
       ) : (
         <span className="text-muted-foreground">–</span>
       )}
