@@ -39,7 +39,7 @@ export const Hero = () => {
       </TextEffect>
 
       {/* Title */}
-      <div className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight w-full max-w-3xl sm:max-w-4xl text-balance flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
+      <div className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight w-full max-w-3xl sm:max-w-4xl text-balance flex flex-wrap justify-center items-center gap-x-2 md:gap-x-4 gap-y-2">
         <TextEffect
           preset="fade-in-blur"
           speedSegment={0.3}

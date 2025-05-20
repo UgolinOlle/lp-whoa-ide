@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 
 import Neovim from "./icons/neovim";
 import { GithubStars } from "./ui/github-stars";
+import { AnimatedLink } from "./ui/animated-link";
 
 export const Header = () => {
   const [menuState, setMenuState] = useState(false);
@@ -80,12 +81,9 @@ export const Header = () => {
                 <ul className="space-y-6 text-base">
                   {HEADER_ITEMS.map((item, index) => (
                     <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-muted-foreground hover:text-accent-foreground block duration-150"
-                      >
-                        <span>{t(item.name)}</span>
-                      </Link>
+                      <AnimatedLink href={item.href}>
+                        {t(item.name)}
+                      </AnimatedLink>
                     </li>
                   ))}
                 </ul>

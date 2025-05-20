@@ -47,7 +47,7 @@ export const WhyAdoptSection = () => {
       <div className="pointer-events-none absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-background z-10" />
       <div className="pointer-events-none absolute bottom-0 right-0 w-full h-16 bg-gradient-to-t from-background z-10" />
 
-      <div className="max-w-6xl mx-auto px-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div className="max-w-6xl mx-auto px-12 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div>
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
