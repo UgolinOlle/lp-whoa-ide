@@ -21,7 +21,7 @@ export const Hero = () => {
   return (
     <section
       ref={containerRef}
-      className="relative max-w-5xl mx-auto px-6 py-16 text-center flex flex-col items-center"
+      className="relative max-w-5xl mx-auto px-4 sm:px-6 py-16 text-center flex flex-col items-center"
     >
       <ReactiveBeams />
 
@@ -33,13 +33,13 @@ export const Hero = () => {
         preset="fade-in-blur"
         speedSegment={0.3}
         as="p"
-        className="text-sm text-muted-foreground mb-4 mt-2"
+        className="text-xs sm:text-sm text-muted-foreground mb-3 mt-2"
       >
         {t("hero.subheading")}
       </TextEffect>
 
-      {/* Title avec badge Neovim */}
-      <div className="text-6xl font-bold leading-tight w-full max-w-4xl text-balance flex flex-wrap justify-center items-center gap-2">
+      {/* Title */}
+      <div className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight w-full max-w-3xl sm:max-w-4xl text-balance flex flex-wrap justify-center items-center gap-x-4 gap-y-2">
         <TextEffect
           preset="fade-in-blur"
           speedSegment={0.3}
@@ -47,6 +47,16 @@ export const Hero = () => {
           className="text-foreground"
         >
           {t("hero.title.strong")}
+        </TextEffect>
+
+        <TextEffect
+          preset="fade-in-blur"
+          speedSegment={0.3}
+          as="span"
+          className="text-foreground font-serif italic font-light"
+          delay={0.1}
+        >
+          {t("hero.title.neovim")}
         </TextEffect>
 
         <NeovimBadge />
@@ -69,12 +79,12 @@ export const Hero = () => {
         speedSegment={0.3}
         delay={0.5}
         as="p"
-        className="mt-4 text-muted-foreground max-w-lg w-full mx-auto z-10"
+        className="mt-4 text-sm sm:text-base text-muted-foreground max-w-xs sm:max-w-md md:max-w-lg w-full mx-auto z-10"
       >
         {t("hero.description")}
       </TextEffect>
 
-      {/* CTA Button */}
+      {/* CTA */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}

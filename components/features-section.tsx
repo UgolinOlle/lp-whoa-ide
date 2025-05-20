@@ -36,7 +36,6 @@ export const FeaturesSection = () => {
               viewport={{ once: true }}
               className="relative bg-muted p-6 border shadow-sm group"
             >
-              {/* IconsPlus in 4 corners */}
               <IconsPlus className="absolute -top-2 -left-2 w-4 h-4 text-green-600" />
               <IconsPlus className="absolute -top-2 -right-2 w-4 h-4 text-green-600" />
               <IconsPlus className="absolute -bottom-2 -left-2 w-4 h-4 text-green-600" />

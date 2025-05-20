@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Roboto_Mono } from "next/font/google";
+import { Roboto, Roboto_Mono, Instrument_Serif } from "next/font/google";
 
 import "./globals.css";
 
@@ -18,6 +18,12 @@ const robotoMono = Roboto_Mono({
   subsets: ["latin"],
 });
 
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
@@ -27,7 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${robotoMono.variable} antialiased`}>
+      <body
+        className={`${roboto.variable} ${robotoMono.variable} ${instrumentSerif.variable} antialiased`}
+      >
         <Providers>
           <Header />
           {children}

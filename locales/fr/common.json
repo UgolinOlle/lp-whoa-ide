@@ -2,7 +2,8 @@
   "hero": {
     "subheading": "Apprécié par plus de 500 développeurs et fondateurs",
     "title": {
-      "strong": "Le kit Neovim ultime",
+      "strong": "Le kit ultime",
+      "neovim": "Neovim",
       "muted": "Pour coder plus vite, plus intelligemment, plus proprement"
     },
     "description": "Tout ce dont vous avez besoin pour créer une app de production — déjà câblée, déjà magnifique.",
@@ -101,6 +102,28 @@
   "built": {
     "title": "Pensé pour les devs, pas pour les tinkerers",
     "description": "Whoa IDE n’est pas juste une config Neovim. C’est une boîte à outils cohérente, maintenue, évolutive. Fini les setups bricolés : installez, ouvrez, codez."
+  },
+  "whyAdopt": {
+    "title": "Pourquoi l’adopter ?",
+    "description": "Whoa IDE n’est pas juste une configuration Neovim. C’est un environnement pensé pour maximiser ta productivité, réduire les frictions et t’offrir une expérience de développement fluide et moderne. Voici pourquoi des développeurs comme toi l’adoptent — et ne reviennent plus en arrière.",
+    "features": [
+      {
+        "title": "Gain de temps colossal",
+        "description": "Optimisé pour la productivité dès la première ligne de code."
+      },
+      {
+        "title": "Une UX pensée pour le flow",
+        "description": "Navigation fluide, raccourcis intuitifs, plugins adaptés."
+      },
+      {
+        "title": "Une base saine et documentée",
+        "description": "Code commenté, structure claire, docs intégrées."
+      },
+      {
+        "title": "Composants réutilisables",
+        "description": "Facile à étendre selon tes besoins spécifiques."
+      }
+    ]
   },
   "header": {
     "feature": "Fonctionnalité",

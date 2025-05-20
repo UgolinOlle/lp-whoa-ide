@@ -2,7 +2,8 @@
   "hero": {
     "subheading": "Loved by 500+ Developers and Founders",
     "title": {
-      "strong": "The Ultimate Neovim",
+      "strong": "The Ultimate",
+      "neovim": "Neovim",
       "muted": "Starter Kit to Code Faster, Smarter, and Cleaner"
     },
     "description": "Everything you need to build production-grade apps — already wired, already beautiful.",
@@ -101,6 +102,28 @@
   "built": {
     "title": "Built for Developers, by Developers",
     "description": "Whoa IDE is designed to be the ultimate Neovim setup for developers, by developers. We’ve spent hundreds of hours perfecting this configuration so you can focus on what matters most: building amazing software."
+  },
+  "whyAdopt": {
+    "title": "Why adopt it?",
+    "description": "Whoa IDE is not just a Neovim configuration. It’s an environment designed to maximize your productivity, reduce friction and provide you with a fluid and modern development experience. Here’s why developers like you adopt it — and don’t go back.",
+    "features": [
+      {
+        "title": "Huge time saver",
+        "description": "Optimized for productivity from the first line of code."
+      },
+      {
+        "title": "UX built for flow",
+        "description": "Smooth navigation, intuitive shortcuts, tailored plugins."
+      },
+      {
+        "title": "Clean and documented base",
+        "description": "Commented code, clear structure, built-in docs."
+      },
+      {
+        "title": "Reusable components",
+        "description": "Easily extendable for your specific needs."
+      }
+    ]
   },
   "header": {
     "feature": "Feature",
