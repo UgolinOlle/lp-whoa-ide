@@ -125,6 +125,29 @@
       }
     ]
   },
+  "faq": {
+    "title": "Foire aux questions",
+    "description": "Trouvez rapidement des réponses claires aux questions fréquentes sur notre plateforme, ses services et ses fonctionnalités.",
+    "items": [
+      {
+        "question": "Est-ce compatible avec Windows, macOS et Linux ?",
+        "answer": "Oui, Whoa IDE fonctionne sur tous les systèmes modernes prenant en charge Neovim. Il est régulièrement testé sur macOS (Apple Silicon), Ubuntu et WSL sous Windows.\n\nPré-requis : Neovim 0.9 ou supérieur, Git, et une connexion Internet pour l’installation des plugins."
+      },
+      {
+        "question": "Puis-je ajouter mes propres plugins ?",
+        "answer": "Absolument. Whoa IDE est modulaire et construit pour être extensible sans casser sa structure de base.\n\nTu peux ajouter tes propres plugins via le fichier `lua/plugins/user.lua` ou créer des modules personnalisés."
+      },
+      {
+        "question": "Est-ce adapté aux débutants avec Neovim ?",
+        "answer": "Oui, totalement. Whoa IDE est conçu pour réduire la courbe d’apprentissage de Neovim : tout est préconfiguré, commenté et pensé pour une prise en main rapide.\n\nSi tu viens de VS Code, tu retrouveras une expérience fluide et familière."
+      },
+      {
+        "question": "Qui maintient Whoa IDE ?",
+        "answer": "Whoa IDE est développé et maintenu par Ugolin Ollé, développeur full-stack passionné par les outils de productivité.\n\nLe projet est open source et régulièrement mis à jour pour suivre l’évolution de l’écosystème Neovim."
+      }
+    ],
+    "footer": "Vous ne trouvez pas ce que vous cherchez ? Contactez notre <1>équipe support</1>"
+  },
   "header": {
     "feature": "Fonctionnalité",
     "solution": "Solution",

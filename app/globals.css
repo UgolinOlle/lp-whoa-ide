@@ -138,4 +138,31 @@
     -webkit-text-stroke: 1px #22c55e;
     text-shadow: none;
   }
+
+  @keyframes beamMove {
+    0% {
+      background-position: 200% 0%;
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      background-position: 0% 0%;
+      opacity: 0.05;
+    }
+  }
+
+  .beam-line {
+    height: 3px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      rgba(26, 188, 156, 0.5),
+      transparent
+    );
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: beamMove 3s linear infinite;
+  }
 }

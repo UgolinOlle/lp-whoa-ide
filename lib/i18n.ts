@@ -16,7 +16,7 @@ i18next
     ns: ["common"],
     defaultNS: "common",
     interpolation: { escapeValue: false },
-    react: { useSuspense: false },
+    react: { useSuspense: true },
   });
 
 export default i18next;
