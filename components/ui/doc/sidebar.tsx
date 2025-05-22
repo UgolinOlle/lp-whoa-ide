@@ -24,6 +24,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { AnimatePresence, motion } from "framer-motion";
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -691,6 +692,48 @@ function SidebarMenuSubButton({
   );
 }
 
+export type SidebarWrapperProps = {
+  children: React.ReactNode;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+const SidebarWrapper = React.forwardRef<HTMLDivElement, SidebarWrapperProps>(
+  ({ className, children, ...props }, ref) => {
+    const [hovered, setHovered] = React.useState(false);
+
+    return (
+      <div
+        ref={ref}
+        className={cn("relative flex flex-col items-start", className)}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        {...props}
+      >
+        <div className="flex gap-1 p-2 group/sidebar-wrapper">
+          <div className="w-[6px] h-[6px] rounded-full bg-black dark:bg-white group-hover/sidebar-wrapper:opacity-50" />
+          <div className="w-[6px] h-[6px] rounded-full bg-black dark:bg-white group-hover/sidebar-wrapper:opacity-50" />
+          <div className="w-[6px] h-[6px] rounded-full bg-black dark:bg-white group-hover/sidebar-wrapper:opacity-50" />
+        </div>
+
+        <AnimatePresence>
+          {hovered && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: -8 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: -8 }}
+              transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+              className="absolute bottom-full left-1/2 -translate-x-1/2 z-50 min-w-[150px] rounded-full border bg-popover p-2 text-sm shadow-xl flex flex-row gap-4 items-center justify-center"
+            >
+              {children}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  },
+);
+
+SidebarWrapper.displayName = "SidebarWrapper";
+
 export {
   Sidebar,
   SidebarContent,
@@ -715,5 +758,6 @@ export {
   SidebarRail,
   SidebarSeparator,
   SidebarTrigger,
+  SidebarWrapper,
   useSidebar,
 };
