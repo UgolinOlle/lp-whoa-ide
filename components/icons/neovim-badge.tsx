@@ -7,7 +7,7 @@ export const NeovimBadge = ({ className }: { className?: string }) => {
       className={cn(
         "inline-flex items-center justify-center align-middle",
         "w-20 h-20 mx-2 rounded-[1.5rem] border-4 border-primary-foreground shadow-2xl overflow-hidden",
-        "bg-gradient-to-tl from-green-400/20 via-emerald-600/20 to-green-900/20",
+        "bg-gradient-to-tr from-green-400/20 via-emerald-600/20 to-green-900/20",
         "relative -rotate-6",
         className,
       )}

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -9,7 +10,6 @@ import { Button } from "@/components/ui/button";
 import { HEADER_ITEMS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
-import Neovim from "./icons/neovim";
 import { GithubStars } from "./ui/animations/github-stars";
 import { AnimatedLink } from "./ui/animations/animated-link";
 
@@ -46,9 +46,15 @@ export const Header = () => {
               <Link
                 href="/"
                 aria-label="home"
-                className="flex items-center space-x-2"
+                className="flex items-center space-x-2 group/logo"
               >
-                <Neovim className="w-8 h-8" />
+                <Image
+                  src="/whoa-ide-logo.png"
+                  alt="Neovim"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover group-hover/logo:-rotate-12 transition-transform duration-300 ease-in-out"
+                />
               </Link>
 
               <button
