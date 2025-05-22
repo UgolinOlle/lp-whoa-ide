@@ -4,6 +4,8 @@ import { BuiltForDevsSection } from "@/components/built-for-section";
 import { WhyAdoptSection } from "@/components/why-adopt-section";
 import { FAQSection } from "@/components/faq-section";
 
+import { getDefaultMetadata } from "@/lib/metadata";
+
 export default function LandingPage() {
   return (
     <main className="bg-background py-16 max-w-6xl mx-auto">
@@ -14,4 +16,8 @@ export default function LandingPage() {
       <FAQSection />
     </main>
   );
+}
+
+export async function generateMetadata() {
+  return await getDefaultMetadata();
 }

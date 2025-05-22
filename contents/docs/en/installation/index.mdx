@@ -1,0 +1,64 @@
+# 🛠️ Installation Guide
+
+Follow these steps to install and set up **WhoaIDE**, your modern and powerful Neovim configuration.
+
+---
+
+## 📦 Requirements
+
+Make sure the following are installed:
+
+- [Neovim 0.9+](https://neovim.io)
+- [Git](https://git-scm.com)
+- [Nerd Font](https://www.nerdfonts.com) (recommended: FiraCode Nerd Font)
+- A terminal that supports true color (e.g., Alacritty, Kitty, WezTerm)
+
+---
+
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/UgolinOlle/WhoaIDE.git ~/.config/nvim
+nvim
+```
+
+---
+
+> The first launch will automatically install Lazy.nvim and all required plugins.
+> 💡 Press Enter if Neovim pauses during plugin installation.
+
+---
+
+## 📁 Where things are
+
+- `lua/core/`: main settings, mappings, options
+- `lua/plugins/`: all plugin declarations
+- `lua/lsp/`: LSP and formatter configuration
+- `after/`: plugin-specific customizations
+- `init.lua`: entry point of the configuration
+
+---
+
+## 🔄 Updating
+
+To update plugins and your config:
+
+```bash
+:WhoaUpdate
+```
+
+---
+
+## 🧪 Troubleshooting
+
+If something seems broken:
+
+```bash
+:WhoaHealth
+```
+
+Make sure your Neovim version is 0.9 or later
+
+---
+
+Need help? Visit the [GitHub repository](https://github.com/UgolinOlle/WhoaIDE) or open an [issue]().

@@ -7,12 +7,12 @@ import { useRef } from "react";
 
 import { AVATARS } from "@/lib/data";
 
-import { AvatarCircles } from "./ui/avatar-circles";
-import { Button } from "./ui/button";
-import { TextHoverEnter } from "./ui/text-hover";
-import { TextEffect } from "./ui/text-effect";
 import { NeovimBadge } from "./icons/neovim-badge";
-import { ReactiveBeams } from "./ui/reactive-beam";
+import { Button } from "./ui/button";
+import { AvatarCircles } from "./ui/animations/avatar-circles";
+import { TextEffect } from "./ui/animations/text-effect";
+import { TextHoverEnter } from "./ui/animations/text-hover";
+import { ReactiveBeams } from "./ui/animations/reactive-beam";
 
 export const Hero = () => {
   const { t } = useTranslation();

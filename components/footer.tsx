@@ -8,7 +8,7 @@ import { FOOTER_LINKS } from "@/lib/data";
 import Neovim from "./icons/neovim";
 import { LangSwitcher } from "./ui/lang-switcher";
 import { ThemeSwitcher } from "./ui/theme-switcher";
-import { TextLoop } from "./ui/text-loop";
+import { TextLoop } from "./ui/animations/text-loop";
 
 export const Footer = () => {
   const { t } = useTranslation();

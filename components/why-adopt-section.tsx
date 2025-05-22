@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { BarChart4, TimerReset, BookText, Layers3 } from "lucide-react";
 
-import { IconsPlus } from "./icons/plus";
 import { cn } from "@/lib/utils";
-import { RadarArc } from "./ui/radar";
+
+import { IconsPlus } from "./icons/plus";
+import { RadarArc } from "./ui/animations/radar";
 
 const loopVariants = {
   animate: {

@@ -1,0 +1,91 @@
+import path from "path";
+import { promises as fs } from "fs";
+import { compileMDX } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
+import rehypePrism from "rehype-prism-plus";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeSlug from "rehype-slug";
+import rehypeCodeTitles from "rehype-code-titles";
+
+import Note from "@/components/ui/doc/note";
+
+type BaseMdxFrontmatter = {
+  title: string;
+  description: string;
+};
+
+const components = {
+  Note,
+};
+
+async function parseMdx<Frontmatter>(rawMdx: string) {
+  return await compileMDX<Frontmatter>({
+    source: rawMdx,
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: {
+        rehypePlugins: [
+          rehypeCodeTitles,
+          rehypePrism,
+          rehypeSlug,
+          rehypeAutolinkHeadings,
+        ],
+        remarkPlugins: [remarkGfm],
+      },
+    },
+    components,
+  });
+}
+
+export async function getDocsForSlug(slug: string, locale: string) {
+  try {
+    const contentPath = getDocsContentPath(slug, locale);
+    const rawMdx = await fs.readFile(contentPath, "utf-8");
+
+    return await parseMdx<BaseMdxFrontmatter>(rawMdx);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+export async function getDocsTocs(slug: string, locale: string) {
+  const contentPath = getDocsContentPath(slug, locale);
+  const rawMdx = await fs.readFile(contentPath, "utf-8");
+  const headingsRegex = /^(#{2,4})\s(.+)$/gm;
+  let match;
+  const extractedHeadings = [];
+
+  while ((match = headingsRegex.exec(rawMdx)) !== null) {
+    const headingLevel = match[1].length;
+    const headingText = match[2].trim();
+    const slug = sluggify(headingText);
+    extractedHeadings.push({
+      level: headingLevel,
+      text: headingText,
+      href: `#${slug}`,
+    });
+  }
+  return extractedHeadings;
+}
+
+export async function getDocsMetadata(slug: string, locale: string) {
+  const result = await getDocsForSlug(slug, locale);
+  if (!result) return null;
+  return {
+    title: result.frontmatter.title,
+    description: result.frontmatter.description,
+  };
+}
+
+function sluggify(text: string) {
+  const slug = text.toLowerCase().replace(/\s+/g, "-");
+  return slug.replace(/[^a-z0-9-]/g, "");
+}
+
+function getDocsContentPath(slug: string, locale: string = "en") {
+  return path.join(
+    process.cwd(),
+    `/contents/docs/${locale}`,
+    `${slug}/index.mdx`,
+  );
+}

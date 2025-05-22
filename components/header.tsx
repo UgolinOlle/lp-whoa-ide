@@ -10,8 +10,8 @@ import { HEADER_ITEMS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 import Neovim from "./icons/neovim";
-import { GithubStars } from "./ui/github-stars";
-import { AnimatedLink } from "./ui/animated-link";
+import { GithubStars } from "./ui/animations/github-stars";
+import { AnimatedLink } from "./ui/animations/animated-link";
 
 export const Header = () => {
   const [menuState, setMenuState] = useState(false);
@@ -95,7 +95,7 @@ export const Header = () => {
                   size="sm"
                   className={cn(isScrolled && "lg:hidden")}
                 >
-                  <Link href="#">
+                  <Link href="/docs">
                     <span>{t("header.documentation")}</span>
                   </Link>
                 </Button>
@@ -104,7 +104,7 @@ export const Header = () => {
                   size="sm"
                   className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
                 >
-                  <Link href="#">
+                  <Link href="/docs">
                     <span>{t("header.documentation")}</span>
                   </Link>
                 </Button>

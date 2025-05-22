@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { IconsPlus } from "./icons/plus";
-import { TextHoverEnter } from "./ui/text-hover";
+import { TextHoverEnter } from "./ui/animations/text-hover";
 
 export const FeaturesSection = () => {
   const { t } = useTranslation("common");
