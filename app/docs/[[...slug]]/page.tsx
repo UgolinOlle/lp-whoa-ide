@@ -38,7 +38,7 @@ export async function generateMetadata({ params: { slug = [] } }: PageProps) {
   if (!metadata) return null;
 
   return {
-    title: metadata.title,
+    title: `${metadata.title} - WhoaIDE Documentation`,
     description: metadata.description,
   };
 }

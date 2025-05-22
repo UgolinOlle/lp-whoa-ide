@@ -1,0 +1,102 @@
+---
+title: "Architecture"
+description: "Comprendre l'organisation des fichiers et dossiers de la configuration WhoaIDE."
+lang: fr
+---
+
+# 🧱 Architecture de WhoaIDE
+
+WhoaIDE est conçu pour rester modulaire, lisible et maintenable. Voici un aperçu détaillé des dossiers et fichiers principaux qui composent la configuration.
+
+---
+
+## 📂 Fichiers racine
+
+- `init.lua` : point d'entrée principal de Neovim.
+- `lazy-lock.json` : snapshot des plugins installés via `lazy.nvim`.
+- `lazyvim.json` : configuration de base héritée de LazyVim.
+- `.stylua.toml`, `.luacheckrc`, etc. : fichiers de linting et formattage pour Lua.
+- `README.md`, `LICENSE` : documentation de base et licence.
+
+---
+
+## 📁 .github
+
+Configuration GitHub :
+
+- `ISSUE_TEMPLATE/` : modèles pour signaler des bugs ou demander des fonctionnalités.
+- `assets/` : visuels pour les réseaux ou le README.
+- `workflows/` : automatisation CI (ex. vérification des types).
+
+---
+
+## 📁 lua/
+
+Le cœur de la configuration :
+
+### 🔌 `plugins/`
+
+Déclarations des plugins organisées par type :
+
+- `code/` : outils de développement (AI, Git, Linting, Formatting…)
+- `editor/` : UX et navigation (Neo-tree, Terminal, Telescope, etc.)
+- `lsp/` : gestion du Language Server Protocol avec `mason`, `config`, etc.
+- `ui/` : composants visuels (theme, lualine, noice, etc.)
+
+### ✂️ `snippets/`
+
+Snippets de code personnalisés (actuellement pour TypeScript).
+
+### 🚀 `whoa/`
+
+La base personnalisée de WhoaIDE :
+
+- `commands.lua` : commandes personnalisées (ex: `:WhoaUpdate`, `:WhoaHealth`)
+- `lazy.lua` : chargement de Lazy.nvim et initialisation
+- `mappings.lua` : tous les raccourcis clavier
+- `options.lua` : options Vim bas niveau
+
+#### 📦 `whoa/core/`
+
+Contient la logique interne découpée en modules :
+
+- `autocmds/` : auto-commandes personnalisées
+- `checker/` : vérification de setup, config, démarrage
+- `features/` : activation/désactivation de fonctionnalités
+- `logger/` : gestion des logs utilisateurs
+- `notes/` : système de prise de notes intégré
+- `plugins/` : configurations avancées, notamment `trouble`, `tabs`
+- `user/` : surcharges utilisateurs + parsing
+- `utils/` : fonctions utilitaires (Git, fichiers, etc.)
+
+#### 🎨 `whoa/theme.lua`
+
+Définition des couleurs, styles et palettes unifiées.
+
+#### 🧠 `whoa/icons/`
+
+Icônes NerdFont utilisées dans les interfaces (lualine, tree, etc.)
+
+---
+
+## 📁 user/
+
+Contenu utilisateur stocké séparément :
+
+- `logs/actions.log` : journalisation des actions de l’utilisateur
+- `main.lua` : point d'entrée pour surcharger la configuration principale
+
+---
+
+## ✅ Résumé
+
+WhoaIDE s’appuie sur une séparation stricte entre :
+
+- les **plugins** (groupés par usage),
+- la **logique cœur** (dans `whoa/`),
+- les **fichiers utilisateur** (dans `user/`),
+- et la configuration de Neovim (via `init.lua`, `lazy.lua`, etc.)
+
+Cette structure te permet d'étendre, modifier ou désactiver des modules très facilement sans casser l'ensemble.
+
+> Tu peux explorer chaque section en détail dans la suite de cette documentation.

@@ -34,7 +34,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         />
         <SearchForm />
       </SidebarHeader>
-      <SidebarContent className="gap-0">
+      <SidebarContent className="gap-0 hide-scrollbar">
         {DOC_ROUTES.navMain.map((item) => (
           <Collapsible
             key={item.title}
@@ -59,13 +59,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                       <SidebarMenuItem key={item.title}>
                         <SidebarMenuButton
                           asChild
-                          isActive={item.isActive}
                           className={cn(
-                            "hover:bg-green-200 transition-colors duration-200 ease-in-out",
+                            "hover:bg-green-200 transition-colors duration-200 ease-in-out pl-5",
                             "active:bg-green-200 active:text-green-900",
                           )}
                         >
-                          <a href={item.url}>{item.title}</a>
+                          <a href={item.url}>
+                            {item.icon}
+                            {item.title}
+                          </a>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
                     ))}

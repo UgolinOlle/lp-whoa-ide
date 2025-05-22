@@ -22,11 +22,11 @@ export default function DocsLayout({
             <SidebarTrigger className="-ml-1 mr-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
             <AutoBreadcrumb />
-            <div className="ml-auto">
+            <div className="ml-auto flex items-center gap-2">
               <LangSwitcherDoc />
             </div>
           </header>
-          <main className="p-10 bg-gradient-to-br from-background to-green-100">
+          <main className="p-10 bg-gradient-to-br from-background to-green-100/20">
             {children}
           </main>
         </SidebarInset>
