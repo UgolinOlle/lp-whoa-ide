@@ -5,13 +5,18 @@ import { Toc } from "@/components/ui/doc/toc";
 import { Typography } from "@/components/ui/doc/typography";
 import { getDocsForSlug, getDocsMetadata } from "@/lib/markdown";
 
-type PageProps = {
-  params: { slug: string[] };
-};
+interface PageProps {
+  params: Promise<{
+    slug?: string[];
+  }>;
+}
 
-export default async function DocsPage({ params: { slug = [] } }: PageProps) {
+export default async function DocsPage({ params }: PageProps) {
+  const { slug = [] } = await params;
   const pathName = slug.join("/");
-  const locale = cookies().get("NEXT_LOCALE")?.value || "fr";
+
+  const cookiesList = await cookies();
+  const locale = cookiesList.get("NEXT_LOCALE")?.value || "fr";
   const res = await getDocsForSlug(pathName, locale);
 
   if (!res) notFound();
@@ -26,11 +31,14 @@ export default async function DocsPage({ params: { slug = [] } }: PageProps) {
   );
 }
 
-export async function generateMetadata({ params: { slug = [] } }: PageProps) {
+export async function generateMetadata({ params }: PageProps) {
+  const { slug = [] } = await params;
   const pathName = slug.join("/");
-  const locale = cookies().get("NEXT_LOCALE")?.value || "fr";
-  const metadata = await getDocsMetadata(pathName, locale);
 
+  const cookiesList = await cookies();
+  const locale = cookiesList.get("NEXT_LOCALE")?.value || "fr";
+
+  const metadata = await getDocsMetadata(pathName, locale);
   if (!metadata) return null;
 
   return {
