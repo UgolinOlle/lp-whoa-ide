@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto, Roboto_Mono, Instrument_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import "@/styles/globals.css";
 import "@/styles/syntax.css";
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${robotoMono.variable} ${instrumentSerif.variable} antialiased`}
       >
+        <Analytics />
         <Providers>
           <LayoutShell>{children}</LayoutShell>
         </Providers>
