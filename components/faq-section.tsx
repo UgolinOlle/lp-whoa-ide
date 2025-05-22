@@ -15,7 +15,7 @@ export const FAQSection = () => {
   const faqItems = t("faq.items", { returnObjects: true });
 
   return (
-    <section className="relative my-12 py-16 md:py-24 overflow-hidden">
+    <section id="faq" className="relative mt-12 py-16 md:py-24 overflow-hidden">
       {/* Fixed-position beams */}
       <div className="pointer-events-none absolute top-0 left-0 z-0 h-full w-full">
         {[...Array(5)].map((_, i) => (

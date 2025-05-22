@@ -42,7 +42,10 @@ export const WhyAdoptSection = () => {
   }));
 
   return (
-    <section className="relative py-16 bg-background border-x border-border border-dashed">
+    <section
+      id="why"
+      className="relative py-16 bg-background border-x border-border border-dashed"
+    >
       <div className="absolute left-0 top-0 h-full w-6 bg-diagonal-stripes pointer-events-none z-0" />
       <div className="absolute right-0 top-0 h-full w-6 bg-diagonal-stripes pointer-events-none z-0" />
       <div className="pointer-events-none absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-background z-10" />

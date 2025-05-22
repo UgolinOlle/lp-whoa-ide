@@ -149,15 +149,15 @@
     "footer": "Can't find what you're looking for? Contact our <1>customer support team</1>"
   },
   "header": {
-    "feature": "Feature",
-    "solution": "Solution",
-    "about": "About",
+    "features": "Features",
+    "why": "Why us",
+    "faq": "FAQ",
     "documentation": "Documentation"
   },
   "footer": {
     "features": "Features",
-    "solution": "Solution",
-    "help": "Help",
-    "about": "About"
+    "why": "Why us",
+    "faq": "FAQ",
+    "documentation": "Documentation"
   }
 }

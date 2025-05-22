@@ -38,9 +38,9 @@ export const AVATARS = [
  * @property {string} href - The URL or anchor link that the navigation item points to.
  */
 export const HEADER_ITEMS = [
-  { name: "header.feature" as const, href: "#link" },
-  { name: "header.solution" as const, href: "#link" },
-  { name: "header.about" as const, href: "#link" },
+  { name: "header.features" as const, href: "/#features" },
+  { name: "header.why" as const, href: "/#why" },
+  { name: "header.faq" as const, href: "/#faq" },
 ];
 
 /**
@@ -63,18 +63,18 @@ export const LANGUAGES = [
 export const FOOTER_LINKS = [
   {
     titleKey: "footer.features" as const,
-    href: "#",
+    href: "/#features",
   },
   {
-    titleKey: "footer.solution" as const,
-    href: "#",
+    titleKey: "footer.why" as const,
+    href: "/#why",
   },
   {
-    titleKey: "footer.help" as const,
-    href: "#",
+    titleKey: "footer.faq" as const,
+    href: "/#faq",
   },
   {
-    titleKey: "footer.about" as const,
-    href: "#",
+    titleKey: "footer.documentation" as const,
+    href: "/docs",
   },
 ];

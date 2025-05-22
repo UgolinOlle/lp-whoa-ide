@@ -21,7 +21,10 @@ export const FeaturesSection = () => {
         }[]);
 
   return (
-    <section className="relative my-16 py-16 border border-dashed border-border">
+    <section
+      id="features"
+      className="relative my-16 py-16 border border-dashed border-border"
+    >
       <div className="absolute left-0 top-0 h-full w-6 bg-diagonal-stripes pointer-events-none z-0" />
       <div className="absolute right-0 top-0 h-full w-6 bg-diagonal-stripes pointer-events-none z-0" />
 
