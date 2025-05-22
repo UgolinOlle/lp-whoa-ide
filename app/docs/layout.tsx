@@ -18,7 +18,7 @@ export default function DocsLayout({
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset>
-          <header className="sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4 bg-gradient-to-r from-background to-green-100">
+          <header className="sticky top-0 flex h-16 shrink-0 items-center gap-2 border-b px-4 bg-gradient-to-r from-background to-green-100 dark:to-green-900">
             <SidebarTrigger className="-ml-1 mr-1" />
             <Separator orientation="vertical" className="mr-2 h-4" />
             <AutoBreadcrumb />
@@ -26,7 +26,7 @@ export default function DocsLayout({
               <LangSwitcherDoc />
             </div>
           </header>
-          <main className="p-10 bg-gradient-to-br from-background to-green-100/20">
+          <main className="p-10 bg-gradient-to-br from-background to-green-100/20 dark:to-green-900/20">
             {children}
           </main>
         </SidebarInset>

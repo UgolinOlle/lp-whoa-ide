@@ -16,8 +16,8 @@ export function TextHoverEnter({ children, className }: TextHoverEnterProps) {
     <div
       className={cn(
         "relative block select-none overflow-hidden whitespace-nowrap text-base font-medium",
-        "text-neutral-500 dark:text-neutral-400",
-        className,
+        "text-foreground",
+        className
       )}
       style={{ lineHeight: 0.9 }}
     >

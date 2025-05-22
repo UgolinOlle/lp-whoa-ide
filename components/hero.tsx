@@ -91,10 +91,8 @@ export const Hero = () => {
         transition={{ duration: 0.6, delay: 0.8 }}
         className="mt-6 z-10"
       >
-        <Button className="group">
-          <TextHoverEnter className="text-primary-foreground">
-            {t("hero.cta")}
-          </TextHoverEnter>
+        <Button className="group" size="lg" variant="secondary">
+          <TextHoverEnter>{t("hero.cta")}</TextHoverEnter>
           <span className="group-hover:-rotate-45 transition-transform duration-300 ease-in-out">
             <ArrowRightIcon className="w-4 h-4" />
           </span>

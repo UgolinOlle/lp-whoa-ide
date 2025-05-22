@@ -71,9 +71,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                           <SidebarMenuButton
                             asChild
                             className={cn(
-                              "hover:bg-green-200 transition-colors duration-200 ease-in-out pl-5",
-                              isActive ? "bg-green-200 text-green-900" : "",
-                              "active:bg-green-200 active:text-green-900",
+                              "hover:bg-green-200 transition-colors duration-200 ease-in-out pl-5 dark:hover:bg-green-900",
+                              isActive
+                                ? "bg-green-200 dark:bg-green-900 text-green-900 dark:text-green-200"
+                                : "",
+                              "active:bg-green-200 active:text-green-900"
                             )}
                           >
                             <a href={item.url}>
