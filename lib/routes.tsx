@@ -90,10 +90,6 @@ export const DOC_ROUTES = {
           icon: <SquareBottomDashedScissors />,
         },
         {
-          title: "Whoa",
-          url: "/docs/whoa",
-        },
-        {
           title: "Commands",
           url: "/docs/commands",
           icon: <SquareTerminal />,

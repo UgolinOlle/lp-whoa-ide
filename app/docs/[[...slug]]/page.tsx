@@ -9,12 +9,9 @@ type PageProps = {
   params: { slug: string[] };
 };
 
-export const dynamic = "force-dynamic";
-
 export default async function DocsPage({ params: { slug = [] } }: PageProps) {
   const pathName = slug.join("/");
-  const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "fr";
+  const locale = cookies().get("NEXT_LOCALE")?.value || "fr";
   const res = await getDocsForSlug(pathName, locale);
 
   if (!res) notFound();
@@ -31,14 +28,13 @@ export default async function DocsPage({ params: { slug = [] } }: PageProps) {
 
 export async function generateMetadata({ params: { slug = [] } }: PageProps) {
   const pathName = slug.join("/");
-  const cookieStore = await cookies();
-  const locale = (await cookieStore).get("NEXT_LOCALE")?.value || "fr";
-
+  const locale = cookies().get("NEXT_LOCALE")?.value || "fr";
   const metadata = await getDocsMetadata(pathName, locale);
+
   if (!metadata) return null;
 
   return {
-    title: `${metadata.title} - WhoaIDE Documentation`,
+    title: `${metadata.title} – WhoaIDE Documentation`,
     description: metadata.description,
   };
 }
