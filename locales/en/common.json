@@ -148,6 +148,9 @@
     ],
     "footer": "Can't find what you're looking for? Contact our <1>customer support team</1>"
   },
+  "doc": {
+    "banner": "Documentation in construction..."
+  },
   "header": {
     "features": "Features",
     "why": "Why us",
