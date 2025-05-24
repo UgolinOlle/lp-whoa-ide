@@ -1,0 +1,112 @@
+---
+title: "Code"
+description: "Presentation of code management in WhoaIDE"
+---
+
+# 📦 Code Plugins in WhoaIDE
+
+The `lua/plugins/code` directory gathers all plugins related to code editing, completion, AI, linting, formatting, Git, and more.  
+Below is a summary of each plugin and its purpose.
+
+---
+
+### 🤖 AI & Autocompletion
+
+- **[yetone/avante.nvim](https://github.com/yetone/avante.nvim)**  
+  Integrates AI assistants (Copilot, Ollama, Claude, etc.) for code suggestions and chat.
+
+- **[hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)**  
+  Powerful autocompletion engine for Neovim.
+
+  - **[chrisgrieser/cmp-nerdfont](https://github.com/chrisgrieser/cmp-nerdfont)**  
+    Completion source for NerdFont icons.
+  - **[roobert/tailwindcss-colorizer-cmp.nvim](https://github.com/roobert/tailwindcss-colorizer-cmp.nvim)**  
+    Tailwind CSS color preview in completion.
+  - **[L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)**  
+    Modern snippet engine.
+    - **[rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)**  
+      Large collection of ready-to-use snippets.
+  - **[saadparwaiz1/cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)**  
+    LuaSnip integration for nvim-cmp.
+
+---
+
+### 🧠 LSP, Syntax & Outline
+
+- **[nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**  
+  Advanced syntax highlighting and parsing.
+
+  - **[JoosepAlviste/nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)**  
+    Context-aware comment strings.
+  - **[windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs)**  
+    Auto-close pairs (brackets, quotes, etc.).
+  - **[hiphish/rainbow-delimiters.nvim](https://github.com/hiphish/rainbow-delimiters.nvim)**  
+    Rainbow parentheses and delimiters.
+
+- **[nvim-treesitter/nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)**  
+  Shows the current code context at the top of the window.
+
+- **[hedyhli/outline.nvim](https://github.com/hedyhli/outline.nvim)**  
+  Displays a code outline/tree for easy navigation.
+
+---
+
+### 📝 Editing & Productivity
+
+- **[numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim)**  
+  Quick and easy code commenting.
+
+- **[MeanderingProgrammer/render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)**  
+  Markdown rendering and preview inside Neovim.
+
+- **[RRethy/nvim-align](https://github.com/RRethy/nvim-align)**  
+  Text alignment for code and tables.
+
+---
+
+### 📚 Documentation
+
+- **[luckasRanarison/nvim-devdocs](https://github.com/luckasRanarison/nvim-devdocs)**  
+  Offline access to DevDocs documentation directly in Neovim.
+
+---
+
+### ⚡ Navigation
+
+- **[ThePrimeagen/harpoon](https://github.com/ThePrimeagen/harpoon)**  
+  Quick file navigation and bookmarking.
+
+---
+
+### 🧹 Linting & Formatting
+
+- **[mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint)**  
+  Asynchronous linting for multiple languages.
+
+- **[stevearc/conform.nvim](https://github.com/stevearc/conform.nvim)**  
+  Fast and extensible code formatter.
+
+---
+
+### 🧩 Git Integration
+
+- **[lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)**  
+  Git change indicators in the sign column.
+
+- **[isakbm/gitgraph.nvim](https://github.com/isakbm/gitgraph.nvim)**  
+  Visualizes Git commit history as a graph.
+
+- **[f-person/git-blame.nvim](https://github.com/f-person/git-blame.nvim)**  
+  Shows Git blame information inline.
+
+- **[sindrets/diffview.nvim](https://github.com/sindrets/diffview.nvim)**  
+  Visual diff and history viewer.
+
+- **[SuperBo/fugit2.nvim](https://github.com/SuperBo/fugit2.nvim)**  
+  Advanced Git interface for Neovim.
+  - **[chrisgrieser/nvim-tinygit](https://github.com/chrisgrieser/nvim-tinygit)**  
+    Lightweight Git CLI integration.
+
+---
+
+> For more details and configuration options, see the files in [`lua/plugins/code/`](lua/plugins/code).

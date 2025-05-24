@@ -1,0 +1,103 @@
+---
+title: Utilisation de Lazy dans WhoaIDE
+description: Guide pour la gestion des plugins avec Lazy dans la configuration WhoaIDE
+---
+
+# 🚀 Utilisation de Lazy dans WhoaIDE
+
+WhoaIDE utilise [lazy.nvim](https://github.com/folke/lazy.nvim) comme gestionnaire de plugins moderne, rapide et modulaire pour Neovim.
+
+## 📦 Installation automatique
+
+Le fichier [`lua/whoa/lazy.lua`](lua/whoa/lazy.lua) vérifie et installe automatiquement Lazy si besoin :
+
+```lua
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system {
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  }
+end
+vim.opt.rtp:prepend(lazypath)
+```
+
+## 📁 Organisation des plugins
+
+Les plugins sont organisés par catégories dans le dossier [`lua/plugins/`](lua/plugins/), puis importés dans Lazy :
+
+```lua
+require("lazy").setup {
+  { import = "plugins.code" },
+  { import = "plugins.editor" },
+  { import = "plugins.lsp" },
+  { import = "plugins.ui" },
+  -- ... autres options
+}
+```
+
+Chaque sous-dossier (`code`, `editor`, `lsp`, `ui`) contient des fichiers Lua listant les plugins correspondants.
+
+## ⚙️ Configuration de Lazy
+
+WhoaIDE configure Lazy avec des options personnalisées :
+
+```lua
+require("lazy").setup {
+  -- ...imports...
+  ui = {
+    border = "rounded",
+    size = { width = 0.8, height = 0.8 },
+    backdrop = 100,
+  },
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  performance = {
+    cache = { enabled = true },
+    rtp = {
+      disabled_plugins = {
+        "gzip", "netrwPlugin", "rplugin", "tarPlugin", "tohtml", "tutor", "zipPlugin",
+      },
+    },
+  },
+  debug = false,
+}
+```
+
+## 🛠️ Commandes utiles
+
+- **Ouvrir Lazy** :  
+  `<leader>l`  
+  (voir [`lua/whoa/mappings.lua`](lua/whoa/mappings.lua))
+
+- **Mettre à jour les plugins** :  
+  `:Lazy update`
+
+- **Synchroniser les plugins** :  
+  `:Lazy sync`
+
+- **Voir l’interface Lazy** :  
+  `:Lazy`
+
+## 🔄 Réinstallation rapide
+
+WhoaIDE propose une fonction pour réinstaller tous les plugins via une popup de confirmation :
+
+```lua
+require("whoa.core.utils").ft_reinstall_plugins()
+```
+
+## 💡 Astuce
+
+Lazy permet le chargement paresseux (lazy loading) des plugins pour accélérer le démarrage de Neovim.  
+Chaque plugin peut être configuré pour se charger selon un événement, une commande, ou une condition.
+
+---
+
+Pour plus de détails, consulte la [documentation officielle de Lazy](https://github.com/folke/lazy.nvim) ou explore le fichier [`lua/whoa/lazy.lua`](lua/whoa/lazy.lua) dans ton projet.
